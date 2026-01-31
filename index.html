@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Out‑Check — Verified Tesla Report for Private Sales | Only Used Tesla Connect</title>
+  <meta name="description" content="Generate a shareable Out‑Check report from your Tesla vehicle data—battery estimate, warranty status, options, and key details. No password sharing." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Out‑Check — Verified Tesla Report for Private Sales" />
+  <meta property="og:description" content="Connect securely → generate a verified report → share the link with buyers." />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="./assets/styles.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#" aria-label="Only Used Tesla Connect home">
+        <span class="brand-mark" aria-hidden="true">◎</span>
+        <span class="brand-text">ONLY USED TESLA</span>
+        <span class="brand-pill">Connect</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary navigation">
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+          <span class="sr-only">Toggle navigation</span>
+          <span aria-hidden="true">☰</span>
+        </button>
+
+        <div id="nav-links" class="nav-links">
+          <a href="#how">How it works</a>
+          <a href="#included">What’s included</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contact">Contact</a>
+        </div>
+
+        <a class="btn btn-primary btn-small" href="#start">Generate report</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="pill">
+            <span class="dot" aria-hidden="true"></span>
+            Secure Tesla connection
+          </div>
+
+          <h1>
+            The <span class="gradient">Out‑Check</span> report for private Tesla sales.
+          </h1>
+
+          <p class="lead">
+            Stop guessing and stop re‑answering the same buyer questions.
+            Connect securely, generate a verified report from your vehicle data, and share the link.
+          </p>
+
+          <div class="cta-row" id="start">
+            <!-- TODO: Replace href with your real start route (e.g. /start or /connect) -->
+            <a class="btn btn-primary" href="/start">Generate my report</a>
+            <a class="btn btn-secondary" href="#sample">See a sample</a>
+          </div>
+
+          <div class="trust-chips" role="list" aria-label="Trust highlights">
+            <div class="chip" role="listitem">No password sharing</div>
+            <div class="chip" role="listitem">Takes ~2 minutes</div>
+            <div class="chip" role="listitem">Shareable link</div>
+          </div>
+
+          <p class="micro">
+            <strong>Best practice:</strong> show the report link in your listing and messages so buyers can self‑verify.
+          </p>
+        </div>
+
+        <div class="hero-card" aria-label="Seller and buyer actions">
+          <div class="tabs" role="tablist" aria-label="Seller or buyer">
+            <button class="tab is-active" type="button" role="tab" aria-selected="true" data-tab="selling">I’m selling</button>
+            <button class="tab" type="button" role="tab" aria-selected="false" data-tab="buying">I’m buying</button>
+          </div>
+
+          <div class="tab-panel is-active" role="tabpanel" data-panel="selling">
+            <div class="icon-badge" aria-hidden="true">✓</div>
+            <h2 class="card-title">Prove what you have</h2>
+            <p class="card-subtitle">
+              Share a verified report link so serious buyers can move faster.
+            </p>
+
+            <ol class="mini-steps">
+              <li>Connect (secure OAuth)</li>
+              <li>Select your Tesla</li>
+              <li>Get your report link</li>
+            </ol>
+
+            <!-- TODO: Replace href with your real start route -->
+            <a class="btn btn-primary btn-block" href="/start">Start seller check</a>
+            <p class="card-note">Read‑only access. Revoke anytime.</p>
+          </div>
+
+          <div class="tab-panel" role="tabpanel" data-panel="buying" aria-hidden="true">
+            <div class="icon-badge" aria-hidden="true">🔎</div>
+            <h2 class="card-title">Verify a report</h2>
+            <p class="card-subtitle">
+              Paste a report link (or code) from the seller to view it.
+            </p>
+
+            <form class="buyer-form" id="buyerForm">
+              <label class="sr-only" for="reportInput">Report link or code</label>
+              <input id="reportInput" name="report" type="text" placeholder="Paste report link or enter code" autocomplete="off" />
+              <button class="btn btn-primary btn-block" type="submit">View report</button>
+              <p class="card-note">Tip: a real report link starts with “https://”.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="how" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>How it works</h2>
+          <p class="muted">Three simple steps. No apps, no screenshots, no back‑and‑forth.</p>
+        </div>
+
+        <div class="steps">
+          <div class="step">
+            <div class="step-num">1</div>
+            <h3>Connect securely</h3>
+            <p>Use Tesla’s sign‑in flow. You never share your password with us.</p>
+          </div>
+          <div class="step">
+            <div class="step-num">2</div>
+            <h3>Generate the report</h3>
+            <p>We pull key vehicle data and compile it into a clean, shareable report.</p>
+          </div>
+          <div class="step">
+            <div class="step-num">3</div>
+            <h3>Share the link</h3>
+            <p>Send one link instead of 30 messages. Buyers can self‑verify instantly.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="included" class="section alt">
+      <div class="container">
+        <div class="section-head">
+          <h2>What’s included</h2>
+          <p class="muted">Make your listing “answer‑proof” with the details buyers care about.</p>
+        </div>
+
+        <div class="grid">
+          <div class="feature">
+            <h3>Vehicle identity</h3>
+            <p>Model, trim, year, configuration, and key specs.</p>
+          </div>
+          <div class="feature">
+            <h3>Options & features</h3>
+            <p>Installed options so buyers know exactly what the car has.</p>
+          </div>
+          <div class="feature">
+            <h3>Battery estimate</h3>
+            <p>An estimate based on available vehicle data (with clear methodology notes).</p>
+          </div>
+          <div class="feature">
+            <h3>Warranty snapshot</h3>
+            <p>Warranty status information (when available) and report timestamp.</p>
+          </div>
+          <div class="feature">
+            <h3>Software</h3>
+            <p>Firmware version and relevant software details visible in the account.</p>
+          </div>
+          <div class="feature">
+            <h3>Charging & usage</h3>
+            <p>Helpful charging/usage stats where available—presented simply.</p>
+          </div>
+        </div>
+
+        <div class="callout" id="sample">
+          <div class="callout-copy">
+            <h3>Show a sample report</h3>
+            <p class="muted">
+              Add a screenshot or embed of a real report here. It’s the fastest way to make the product “click”.
+            </p>
+          </div>
+          <div class="placeholder-image" aria-label="Sample report placeholder">
+            <span>Drop in a sample report image</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="pricing" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Pricing</h2>
+          <p class="muted">Keep it simple. One report, one price.</p>
+        </div>
+
+        <div class="pricing">
+          <div class="price-card">
+            <div class="price-top">
+              <h3>Out‑Check Report</h3>
+              <p class="muted">For private sellers & buyers</p>
+            </div>
+
+            <!-- TODO: Replace with your actual price and billing copy -->
+            <div class="price">
+              <span class="amount">$XX</span>
+              <span class="per">per report</span>
+            </div>
+
+            <ul class="price-list">
+              <li>Secure connection (no password sharing)</li>
+              <li>Instant report generation</li>
+              <li>Shareable verification link</li>
+            </ul>
+
+            <!-- TODO: Replace href with your checkout/start route -->
+            <a class="btn btn-primary btn-block" href="/start">Generate a report</a>
+
+            <p class="card-note">Replace $XX and copy to match your Stripe pricing.</p>
+          </div>
+
+          <div class="price-faq">
+            <h3>What buyers ask most</h3>
+            <p class="muted">
+              Your homepage should explicitly promise to answer these:
+            </p>
+            <ul class="bullets">
+              <li>“What options does it have?”</li>
+              <li>“Any battery degradation?”</li>
+              <li>“What’s the warranty situation?”</li>
+              <li>“Can you prove it’s accurate?”</li>
+            </ul>
+            <p class="muted">
+              The more you answer up front, the fewer tire‑kickers you’ll get.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="section alt">
+      <div class="container">
+        <div class="section-head">
+          <h2>FAQ</h2>
+          <p class="muted">The trust‑building answers should be one scroll away.</p>
+        </div>
+
+        <div class="faq">
+          <details>
+            <summary>Do I have to share my Tesla password?</summary>
+            <p>No. Sellers connect via Tesla’s sign‑in flow (OAuth). You should also explain exactly what permissions you request and how users can revoke access.</p>
+          </details>
+
+          <details>
+            <summary>Is the connection read‑only?</summary>
+            <p>It should be. If you request any non‑read scope, explain why—in plain English—and offer an alternative if possible.</p>
+          </details>
+
+          <details>
+            <summary>How long does it take?</summary>
+            <p>Most users should finish in about 2 minutes: connect → select vehicle → generate report.</p>
+          </details>
+
+          <details>
+            <summary>What exactly is “battery health”?</summary>
+            <p>Be precise. If you provide an estimate (not a service‑mode measurement), say so and explain the method. Avoid vague claims.</p>
+          </details>
+
+          <details>
+            <summary>Are you affiliated with Tesla?</summary>
+            <p>No. Add a clear, consistent disclaimer in the footer and on your connect screen.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container contact">
+        <div>
+          <h2>Contact</h2>
+          <p class="muted">
+            Add your support email and a short promise like “We reply within 1 business day.”
+          </p>
+        </div>
+
+        <div class="contact-card">
+          <p><strong>Email</strong></p>
+          <p class="muted">support@onlyusedtesla.com</p>
+          <p><strong>Press / Partnerships</strong></p>
+          <p class="muted">contact@onlyusedtesla.com</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="bottom-cta">
+      <div class="container bottom-cta-inner">
+        <div>
+          <h2>Make your Tesla listing easier to trust.</h2>
+          <p class="muted">Generate your Out‑Check report and share the link with buyers.</p>
+        </div>
+        <a class="btn btn-primary" href="/start">Generate report</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <p><strong>Only Used Tesla Connect</strong></p>
+        <p class="muted">
+          Out‑Check is an independent verification report. Not affiliated with Tesla, Inc.
+        </p>
+      </div>
+      <div class="footer-right">
+        <a href="#faq">FAQ</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./assets/app.js"></script>
+</body>
+</html>
