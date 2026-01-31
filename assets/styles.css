@@ -1,4 +1,4 @@
-/* Out‑Check landing page (no framework) */
+/* Out-Check landing page (no framework) */
 :root{
   --bg: #ffffff;
   --text: #0f172a;
@@ -137,11 +137,11 @@ a:hover{ text-decoration: underline; }
 .btn-small{ padding: 10px 14px; font-size: 14px; }
 .btn-block{ width: 100%; border-radius: 14px; }
 .btn-primary{
-  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  background: #0b1220;
   color: #fff;
   border: none;
 }
-.btn-primary:hover{ text-decoration: none; filter: brightness(0.98); }
+.btn-primary:hover{ text-decoration: none; background: #111827; }
 .btn-secondary{
   background: #fff;
 }
@@ -149,6 +149,21 @@ a:hover{ text-decoration: underline; }
 
 .hero{
   padding: 54px 0 22px;
+}
+
+.hero-simple{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 18px;
+  max-width: 780px;
+}
+
+.hero-simple{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
 }
 .hero-grid{
   display: grid;
