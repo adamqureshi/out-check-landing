@@ -17,3 +17,6 @@ Quick edits (search for TODO in index.html):
 
 Deploy:
 - Host these files anywhere (GitHub Pages, Vercel, Netlify, S3, or serve from your app).
+
+
+Update: Minimal version (hero + sample + FAQ + footer). Removed How it works, Included, Pricing, and Contact sections.
