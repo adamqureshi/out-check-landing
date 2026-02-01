@@ -50,10 +50,24 @@
       <div class="container hero-simple">
         <h1>Out Check Report.</h1>
 
-        <!-- TODO: Replace href with your real start route (e.g. /start or /connect) -->
-        <a class="btn btn-primary" href="/start">Get OUT-CHECK report</a>
+        <a class="btn btn-primary btn-big"
+           href="/connect-progress.html/"
+           data-modal-src="/connect-progress.html/"
+           data-modal-title="Get OUT-CHECK report">Get OUT-CHECK report</a>
       </div>
     </section>
+
+    <hr class="divider" aria-hidden="true" />
+
+    <section class="sample-cta" id="sample">
+      <div class="container sample-inner">
+        <a class="btn btn-primary btn-big"
+           href="/OUT-report/"
+           data-modal-src="/OUT-report/"
+           data-modal-title="View a sample report">View a sample report</a>
+      </div>
+    </section>
+
 
     <section id="how" class="section">
       <div class="container">
@@ -239,6 +253,30 @@
       </div>
     </div>
   </footer>
+
+
+  <!-- Lightbox modal (used for Connect + Sample Report) -->
+  <div class="modal" id="lightbox" aria-hidden="true">
+    <div class="modal-backdrop" data-close-modal></div>
+
+    <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <div class="modal-header">
+        <div class="modal-title" id="modal-title"></div>
+        <button class="modal-close" type="button" data-close-modal aria-label="Close">✕</button>
+      </div>
+
+      <div class="modal-body">
+        <iframe
+          id="modal-iframe"
+          title=""
+          src="about:blank"
+          loading="lazy"
+          allow="clipboard-read; clipboard-write; fullscreen"
+        ></iframe>
+      </div>
+    </div>
+  </div>
+
 
   <script src="./assets/app.js"></script>
 </body>

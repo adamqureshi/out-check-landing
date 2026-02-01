@@ -136,12 +136,14 @@ a:hover{ text-decoration: underline; }
 }
 .btn-small{ padding: 10px 14px; font-size: 14px; }
 .btn-block{ width: 100%; border-radius: 14px; }
+.btn-big{ padding: 18px 24px; font-size: 16px; }
+
 .btn-primary{
-  background: #0b1220;
+  background: #000;
   color: #fff;
   border: none;
 }
-.btn-primary:hover{ text-decoration: none; background: #111827; }
+.btn-primary:hover{ text-decoration: none; background: #111; }
 .btn-secondary{
   background: #fff;
 }
@@ -505,6 +507,80 @@ details p{ margin: 10px 0 0; color: var(--muted); }
   font-weight: 700;
 }
 
+
+/* Simple divider + sample CTA */
+.divider{
+  border: 0;
+  border-top: 1px solid var(--soft);
+  margin: 0;
+}
+.sample-cta{
+  padding: 26px 0 10px;
+}
+.sample-inner{
+  display: flex;
+  justify-content: center;
+}
+
+/* Lightbox modal */
+body.is-modal-open{ overflow: hidden; }
+
+.modal{
+  position: fixed;
+  inset: 0;
+  display: none;
+  z-index: 1000;
+}
+.modal.is-open{ display: block; }
+.modal-backdrop{
+  position: absolute;
+  inset: 0;
+  background: rgba(2, 6, 23, 0.62);
+}
+.modal-dialog{
+  position: relative;
+  margin: 5vh auto;
+  width: min(980px, calc(100% - 24px));
+  height: 90vh;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.modal-header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--soft);
+}
+.modal-title{
+  font-weight: 800;
+  color: #0f172a;
+  font-size: 14px;
+}
+.modal-close{
+  border: 1px solid var(--border);
+  background: #fff;
+  border-radius: 12px;
+  padding: 8px 10px;
+  cursor: pointer;
+  font-weight: 900;
+}
+.modal-close:hover{ background: rgba(15, 23, 42, 0.03); }
+.modal-body{
+  flex: 1;
+}
+.modal-body iframe{
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
 /* Responsive */
 @media (max-width: 980px){
   .hero-grid{ grid-template-columns: 1fr; }
@@ -516,6 +592,8 @@ details p{ margin: 10px 0 0; color: var(--muted); }
   .bottom-cta-inner{ flex-direction: column; align-items: flex-start; }
   .nav-links{ display: none; }
   .nav-toggle{ display: inline-flex; }
+  .modal-dialog{ margin: 0; width: 100%; height: 100%; border-radius: 0; }
+
   .nav.is-open .nav-links{
     display: flex;
     position: absolute;
