@@ -2,151 +2,186 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Out Check Report | Only Used Tesla Connect</title>
-  <meta name="description" content="Get an Out-Check report from your Tesla vehicle data and share it with buyers." />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>OUT CHECK — Tesla report for private sales</title>
+  <meta name="description" content="OUT CHECK is a shareable Tesla report you can generate from your vehicle data for private buyers." />
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Out Check Report" />
-  <meta property="og:description" content="Get an Out-Check report and share the link with buyers." />
-  <meta property="og:type" content="website" />
-
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="./assets/styles.css" />
+  <link rel="icon" href="assets/icon.png" />
+  <link rel="stylesheet" href="assets/styles.css" />
 </head>
-
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
-
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="#" aria-label="Only Used Tesla Connect home">
-        <span class="brand-mark" aria-hidden="true">◎</span>
-        <span class="brand-text">ONLY USED TESLA</span>
-        <span class="brand-pill">Connect</span>
+      <a class="brand" href="#top" aria-label="Only Used Tesla">
+        <img class="brand-icon" src="assets/icon.png" alt="" />
+        <span class="brand-name">ONLY USED TESLA</span>
+        <span class="brand-badge">Connect</span>
       </a>
 
-      <nav class="nav" aria-label="Primary navigation">
-        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
-          <span class="sr-only">Toggle navigation</span>
-          <span aria-hidden="true">☰</span>
-        </button>
-
-        <div id="nav-links" class="nav-links">
-          <a href="#sample">Sample</a>
-          <a href="#faq">FAQ</a>
-        </div>
-
-
-        <!-- Single CTA lives in the hero (keep header clean) -->
+      <nav class="nav">
+        <a class="nav-link" href="#included">What’s inside</a>
+        <a class="nav-link" href="#faq">FAQ</a>
       </nav>
     </div>
   </header>
 
-  <main id="main">
-    <section class="hero" id="start">
-      <div class="container hero-simple">
-        <h1>Out Check Report.</h1>
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <h1 class="hero-title">OUT CHECK.</h1>
+          <p class="hero-subtitle">
+            A simple report you can share with buyers. Generated from your Tesla’s data — no password sharing.
+          </p>
 
-        <a class="btn btn-primary btn-big"
-           href="/connect-progress.html/"
-           data-modal-src="/connect-progress.html/"
-           data-modal-title="Get OUT-CHECK report">Get OUT-CHECK report</a>
+          <div class="cta-row" role="group" aria-label="Primary actions">
+            <a class="btn btn-primary btn-lg"
+               href="/connect-progress.html/"
+               data-modal-src="/connect-progress.html/">
+              Buy now
+            </a>
+
+            <span class="cta-or" aria-hidden="true">or</span>
+
+            <a class="btn btn-secondary btn-lg"
+               href="/OUT-report/"
+               data-modal-src="/OUT-report/">
+              View sample report
+            </a>
+          </div>
+
+          <div class="hero-meta">
+            <div class="pill-row" aria-label="Key benefits">
+              <span class="pill">Read-only connection</span>
+              <span class="pill">Revoke anytime</span>
+              <span class="pill">Shareable link</span>
+            </div>
+
+            <p class="fineprint">
+              Intro price: <strong>$20</strong> per report (testing). If you have a promo code, you can apply it at checkout.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
 
-    <hr class="divider" aria-hidden="true" />
-
-    <section class="sample-cta" id="sample">
-      <div class="container sample-inner">
-        <a class="btn btn-primary btn-big"
-           href="/OUT-report/"
-           data-modal-src="/OUT-report/"
-           data-modal-title="View a sample report">View a sample report</a>
-      </div>
-    </section>
-
-
-    <section id="faq" class="section alt">
+    <section id="included" class="section">
       <div class="container">
-        <div class="section-head">
-          <h2>FAQ</h2>
-          <p class="muted">The trust-building answers should be one scroll away.</p>
+        <h2 class="section-title">Every OUT CHECK report includes</h2>
+        <p class="section-subtitle">
+          The basics buyers ask about — organized into a single link you can share.
+        </p>
+
+        <div class="feature-grid">
+          <div class="card">
+            <h3 class="card-title">Battery snapshot</h3>
+            <p class="card-text">Key battery and range-related details to help answer the “how’s the battery?” question.</p>
+          </div>
+
+          <div class="card">
+            <h3 class="card-title">Vehicle basics</h3>
+            <p class="card-text">Core vehicle identifiers and details buyers expect when verifying a listing.</p>
+          </div>
+
+          <div class="card">
+            <h3 class="card-title">Options & configuration</h3>
+            <p class="card-text">A clear view of what the car actually has (trim/features/config).</p>
+          </div>
+
+          <div class="card">
+            <h3 class="card-title">Software & system info</h3>
+            <p class="card-text">Helpful software/system details that build trust and reduce back-and-forth.</p>
+          </div>
+
+          <div class="card">
+            <h3 class="card-title">Warranty snapshot</h3>
+            <p class="card-text">Warranty-related information where available (model and data dependent).</p>
+          </div>
+
+          <div class="card">
+            <h3 class="card-title">Timestamped report link</h3>
+            <p class="card-text">Share the report URL with buyers so you don’t repeat the same answers.</p>
+          </div>
         </div>
 
-        <div class="faq">
-          <details>
-            <summary>Do I have to share my Tesla password?</summary>
-            <p>No. Sellers connect via Tesla’s sign-in flow (OAuth). You should also explain exactly what permissions you request and how users can revoke access.</p>
-          </details>
-
-          <details>
-            <summary>Is the connection read-only?</summary>
-            <p>It should be. If you request any non-read scope, explain why—in plain English—and offer an alternative if possible.</p>
-          </details>
-
-          <details>
-            <summary>How long does it take?</summary>
-            <p>Most users should finish in about 2 minutes: connect → select vehicle → generate report.</p>
-          </details>
-
-          <details>
-            <summary>What exactly is “battery health”?</summary>
-            <p>Be precise. If you provide an estimate (not a service-mode measurement), say so and explain the method. Avoid vague claims.</p>
-          </details>
-
-          <details>
-            <summary>Are you affiliated with Tesla?</summary>
-            <p>No. Add a clear, consistent disclaimer in the footer and on your connect screen.</p>
-          </details>
-        </div>
-      </div>
-    </section>
-
-    <!-- Bottom CTA removed (single CTA lives in the hero) -->
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div class="footer-left">
-        <p><strong>Only Used Tesla Connect</strong></p>
-        <p class="muted">
-          Out-Check is an independent verification report. Not affiliated with Tesla, Inc.
+        <p class="fineprint subtle">
+          Note: report contents vary by vehicle/model and available data.
         </p>
       </div>
-      <div class="footer-right">
-        <a href="#start">Top</a>
-        <a href="#sample">Sample</a>
-        <a href="#faq">FAQ</a>
+    </section>
+
+    <section id="faq" class="section section-muted">
+      <div class="container">
+        <h2 class="section-title">FAQ</h2>
+        <p class="section-subtitle">
+          Quick answers to the trust questions.
+        </p>
+
+        <div class="faq">
+          <details class="faq-item">
+            <summary>Do I have to share my Tesla password?</summary>
+            <div class="faq-body">
+              <p>No. OUT CHECK is designed so you don’t hand over your Tesla account password to a buyer.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Is the connection read-only?</summary>
+            <div class="faq-body">
+              <p>Yes — the goal is verification/reporting, not controlling the vehicle.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>How long does it take?</summary>
+            <div class="faq-body">
+              <p>Usually about a minute or two. You connect, then we generate a shareable report link.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>How much does it cost?</summary>
+            <div class="faq-body">
+              <p>We’re currently testing pricing. Intro price is <strong>$20</strong> per report.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Are you affiliated with Tesla?</summary>
+            <div class="faq-body">
+              <p>No. OUT CHECK / Only Used Tesla is not affiliated with Tesla, Inc.</p>
+            </div>
+          </details>
+        </div>
       </div>
+    </section>
 
-    </div>
-  </footer>
-
-
-  <!-- Lightbox modal (used for Connect + Sample Report) -->
-  <div class="modal" id="lightbox" aria-hidden="true">
-    <div class="modal-backdrop" data-close-modal></div>
-
-    <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-      <div class="modal-header">
-        <div class="modal-title" id="modal-title"></div>
-        <button class="modal-close" type="button" data-close-modal aria-label="Close">✕</button>
+    <footer class="footer">
+      <div class="container footer-inner">
+        <div class="footer-left">
+          <img class="footer-logo" src="assets/logo-wordmark.png" alt="Only Used Tesla" />
+        </div>
+        <div class="footer-right">
+          <p class="fineprint">
+            Not affiliated with Tesla, Inc.
+          </p>
+          <p class="fineprint subtle">
+            © <span id="year"></span> Only Used Tesla
+          </p>
+        </div>
       </div>
+    </footer>
+  </main>
 
-      <div class="modal-body">
-        <iframe
-          id="modal-iframe"
-          title=""
-          src="about:blank"
-          loading="lazy"
-          allow="clipboard-read; clipboard-write; fullscreen"
-        ></iframe>
-      </div>
+  <!-- Modal / Lightbox -->
+  <div class="modal" id="modal" aria-hidden="true" role="dialog" aria-label="Dialog">
+    <div class="modal-backdrop" data-modal-close></div>
+    <div class="modal-panel" role="document">
+      <button class="modal-close" type="button" aria-label="Close" data-modal-close>×</button>
+      <iframe class="modal-iframe" title="Embedded content" src="about:blank"></iframe>
     </div>
   </div>
 
-
-  <script src="./assets/app.js"></script>
+  <script src="assets/app.js"></script>
 </body>
 </html>

@@ -1,85 +1,51 @@
-// Tiny JS to keep the page framework-free.
 (function () {
-  // Mobile nav toggle
-  const headerNav = document.querySelector(".nav");
-  const toggle = document.querySelector(".nav-toggle");
-  const links = document.querySelectorAll(".nav-links a");
+  const modal = document.getElementById('modal');
+  const iframe = modal ? modal.querySelector('.modal-iframe') : null;
+  const closeTargets = modal ? modal.querySelectorAll('[data-modal-close]') : [];
+  const body = document.body;
 
-  if (toggle && headerNav) {
-    toggle.addEventListener("click", () => {
-      const isOpen = headerNav.classList.toggle("is-open");
-      toggle.setAttribute("aria-expanded", String(isOpen));
-    });
-
-    links.forEach((a) =>
-      a.addEventListener("click", () => {
-        headerNav.classList.remove("is-open");
-        toggle.setAttribute("aria-expanded", "false");
-      })
-    );
-  }
-
-  // Lightbox modal (iframes: Connect + Sample Report)
-  const modal = document.getElementById("lightbox");
-  const iframe = document.getElementById("modal-iframe");
-  const titleEl = document.getElementById("modal-title");
-
-  if (!modal || !iframe) return;
-
-  let lastFocus = null;
-
-  function openModal(src, title) {
-    lastFocus = document.activeElement;
-
-    if (titleEl) titleEl.textContent = title || "";
-    iframe.setAttribute("title", title || "Modal content");
-
-    // Navigate the iframe
-    if (src) iframe.src = src;
-
-    modal.classList.add("is-open");
-    modal.setAttribute("aria-hidden", "false");
-    document.body.classList.add("is-modal-open");
-
-    const closeBtn = modal.querySelector(".modal-close");
-    if (closeBtn) closeBtn.focus();
+  function openModal(src) {
+    if (!modal || !iframe) return;
+    iframe.src = src;
+    modal.setAttribute('aria-hidden', 'false');
+    body.style.overflow = 'hidden';
   }
 
   function closeModal() {
-    modal.classList.remove("is-open");
-    modal.setAttribute("aria-hidden", "true");
-    document.body.classList.remove("is-modal-open");
-
-    if (lastFocus && typeof lastFocus.focus === "function") {
-      lastFocus.focus();
-    }
+    if (!modal || !iframe) return;
+    modal.setAttribute('aria-hidden', 'true');
+    // Clear iframe after close to stop audio/video/etc
+    iframe.src = 'about:blank';
+    body.style.overflow = '';
   }
 
-  // Open modal on click for any element with data-modal-src
-  document.querySelectorAll("[data-modal-src]").forEach((el) => {
-    el.addEventListener("click", (e) => {
-      // Allow opening in a new tab/window with modifier keys
-      if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+  // Click handlers for any element that has data-modal-src
+  document.addEventListener('click', function (e) {
+    const trigger = e.target.closest('[data-modal-src]');
+    if (!trigger) return;
 
-      e.preventDefault();
-      const src = el.getAttribute("data-modal-src");
-      const title =
-        el.getAttribute("data-modal-title") ||
-        (el.textContent ? el.textContent.trim() : "");
+    const src = trigger.getAttribute('data-modal-src');
+    if (!src) return;
 
-      openModal(src, title);
+    e.preventDefault();
+    openModal(src);
+  });
+
+  // Close handlers
+  closeTargets.forEach((el) => {
+    el.addEventListener('click', function () {
+      closeModal();
     });
   });
 
-  // Close modal: backdrop + X button (both have data-close-modal)
-  modal.querySelectorAll("[data-close-modal]").forEach((el) => {
-    el.addEventListener("click", closeModal);
-  });
-
-  // Escape key closes
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && modal.classList.contains("is-open")) {
+  // Close on ESC
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && modal && modal.getAttribute('aria-hidden') === 'false') {
       closeModal();
     }
   });
+
+  // Year in footer
+  const yearEl = document.getElementById('year');
+  if (yearEl) yearEl.textContent = String(new Date().getFullYear());
 })();
