@@ -1,5 +1,6 @@
 :root{
   --bg: #ffffff;
+  --bg-gradient: linear-gradient(180deg, #deebf5 0px, #f5f7f8 520px, #ffffff 960px);
   --bg-muted: #f7f7f8;
   --text: #0f172a;
   --muted: #475569;
@@ -14,7 +15,9 @@ body{
   margin: 0;
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
   color: var(--text);
-  background: var(--bg);
+  background-color: var(--bg);
+  background-image: var(--bg-gradient);
+  background-repeat: no-repeat;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
