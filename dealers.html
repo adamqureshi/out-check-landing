@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>OUT CHECK for Dealers — Only Used Tesla</title>
+  <meta name="description" content="OUT CHECK for Dealers: shareable Tesla reports for your inventory + dealer listings on Only Used Tesla (coming soon)." />
+
+  <link rel="icon" href="assets/icon.png" />
+  <link rel="stylesheet" href="assets/styles.css" />
+
+  <!-- Page-only styling (no changes to your existing CSS files) -->
+  <style>
+    .nav-link[aria-current="page"]{ color: #0b1220; }
+    .two-col{ margin-top: 22px; display:grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+    @media (max-width: 900px){ .two-col{ grid-template-columns: 1fr; } }
+
+    /* Form */
+    .form-card{ margin-top: 18px; }
+    .form-grid{ display:grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+    @media (max-width: 900px){ .form-grid{ grid-template-columns: 1fr; } }
+
+    .span-2{ grid-column: span 2; }
+    @media (max-width: 900px){ .span-2{ grid-column: auto; } }
+
+    label{ display:block; font-size: 13px; color: var(--muted); margin: 0 0 6px; }
+    input{
+      width: 100%;
+      padding: 12px 12px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      font-size: 14px;
+      background: #fff;
+      color: var(--text);
+      outline: none;
+    }
+    input:focus{ box-shadow: 0 0 0 4px rgba(15, 23, 42, 0.06); }
+
+    .form-actions{ margin-top: 12px; display:flex; gap: 12px; flex-wrap: wrap; align-items:center; }
+    .form-actions .btn{ min-width: 260px; }
+    .helper{ margin-top: 10px; font-size: 13px; color: var(--muted); max-width: 70ch; }
+    .micro{ font-size: 12px; color: #94a3b8; margin-top: 8px; }
+
+    .callout{
+      display:flex; align-items:center; justify-content:center;
+      padding: 12px 14px;
+      border: 1px dashed rgba(15,23,42,0.25);
+      border-radius: 14px;
+      background: rgba(255,255,255,0.75);
+      margin-top: 14px;
+      text-align:center;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .callout strong{ color: #0b1220; }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="./" aria-label="Only Used Tesla">
+        <img class="brand-icon" src="assets/icon.png" alt="" />
+        <span class="brand-name">ONLY USED TESLA</span>
+        <span class="brand-badge">Dealers</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary navigation">
+        <a class="nav-link" href="./">Home</a>
+        <a class="nav-link" href="./dealers.html" aria-current="page">For Dealers</a>
+        <a class="nav-link" href="#benefits">Benefits</a>
+        <a class="nav-link" href="#listings">Listings</a>
+        <a class="nav-link" href="#signup">Sign up</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <h1 class="hero-title">OUT CHECK for Dealers.</h1>
+          <p class="hero-subtitle">
+            Sell Teslas with a shareable OUT CHECK report for each VIN — and (coming soon) list your inventory on <strong>Only Used Tesla</strong>.
+          </p>
+
+          <div class="cta-row" role="group" aria-label="Primary actions">
+            <a class="btn btn-primary btn-lg" href="#signup">Dealers — sign up</a>
+
+            <span class="cta-or" aria-hidden="true">or</span>
+
+            <a class="btn btn-secondary btn-lg"
+               href="/OUT-report/"
+               data-modal-src="/OUT-report/">
+              View sample report
+            </a>
+          </div>
+
+          <div class="hero-meta">
+            <div class="pill-row" aria-label="Dealer highlights">
+              <span class="pill">$20 / report (dealer)</span>
+              <span class="pill">Shareable link per VIN</span>
+              <span class="pill">Bulk inventory tools (coming soon)</span>
+              <span class="pill">List on Only Used Tesla (coming soon)</span>
+            </div>
+
+            <p class="fineprint">
+              OUT CHECK is the trust layer — like CARFAX — but built for Tesla data. Not affiliated with Tesla, Inc.
+            </p>
+
+            <div class="callout">
+              <span><strong>Buyer tip:</strong> When shopping a used Tesla, ask the dealer for an <strong>OUT CHECK</strong> report link.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BENEFITS -->
+    <section id="benefits" class="section">
+      <div class="container">
+        <h2 class="section-title">Why dealers use OUT CHECK</h2>
+        <p class="section-subtitle">
+          Buyers ask the same questions every time: battery, options, warranty, software. OUT CHECK answers them once — in a report link you can share.
+        </p>
+
+        <div class="feature-grid">
+          <div class="card">
+            <h3 class="card-title">Close faster with proof</h3>
+            <p class="card-text">Reduce “what does it have?” and “how’s the battery?” back-and-forth.</p>
+          </div>
+
+          <div class="card">
+            <h3 class="card-title">Differentiate your listings</h3>
+            <p class="card-text">Stand out by showing an OUT CHECK link on every Tesla you sell.</p>
+          </div>
+
+          <div class="card">
+            <h3 class="card-title">Shareable link per VIN</h3>
+            <p class="card-text">Text it to leads, attach to listings, or print QR cards for the lot.</p>
+          </div>
+
+          <div class="card">
+            <h3 class="card-title">Built from Tesla data</h3>
+            <p class="card-text">Generated from the vehicle’s data — no password sharing with buyers.</p>
+          </div>
+
+          <div class="card">
+            <h3 class="card-title">Bulk reporting (coming soon)</h3>
+            <p class="card-text">Run reports across inventory in batches with status tracking.</p>
+          </div>
+
+          <div class="card">
+            <h3 class="card-title">AI summary (coming soon)</h3>
+            <p class="card-text">Instant highlights + buyer-friendly summary to speed up conversations.</p>
+          </div>
+        </div>
+
+        <p class="fineprint subtle">
+          Note: report contents vary by vehicle/model and available data.
+        </p>
+      </div>
+    </section>
+
+    <!-- LISTINGS -->
+    <section id="listings" class="section section-muted">
+      <div class="container">
+        <h2 class="section-title">List your inventory on Only Used Tesla</h2>
+        <p class="section-subtitle">
+          Dealers will be able to publish Tesla inventory on Only Used Tesla — with OUT CHECK report links attached.
+        </p>
+
+        <div class="two-col">
+          <div class="card">
+            <h3 class="card-title">Dealer listings (coming soon)</h3>
+            <p class="card-text">
+              Showcase your Teslas in one place. Each listing can include an OUT CHECK report link to build buyer trust.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3 class="card-title">More qualified leads</h3>
+            <p class="card-text">
+              Buyers browsing Only Used Tesla can filter for what they want and reach out with fewer basic questions.
+            </p>
+          </div>
+        </div>
+
+        <div class="callout" style="margin-top: 16px;">
+          <span>Want to be an early listing partner? <strong>Sign up below</strong> and we’ll reach out.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SIGNUP -->
+    <section id="signup" class="section">
+      <div class="container">
+        <h2 class="section-title">Dealer sign up</h2>
+        <p class="section-subtitle">
+          Fill this out and we’ll reach out with dealer pricing + onboarding for OUT CHECK reports (and listings).
+        </p>
+
+        <div class="card form-card">
+          <form id="dealerSignupForm">
+            <div class="form-grid">
+              <div>
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text" placeholder="Name" required />
+              </div>
+
+              <div>
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" placeholder="Email" required />
+              </div>
+
+              <div>
+                <label for="dealershipName">Dealership Name</label>
+                <input id="dealershipName" name="dealershipName" type="text" placeholder="Dealership Name" required />
+              </div>
+
+              <div>
+                <label for="zip">Dealership ZIP</label>
+                <input id="zip" name="zip" type="text" inputmode="numeric" placeholder="ZIP Code" required />
+              </div>
+
+              <div>
+                <label for="website">Dealership Website</label>
+                <input id="website" name="website" type="url" placeholder="https://yourdealership.com" />
+              </div>
+
+              <div>
+                <label for="inventoryCount">How many Teslas do you have in inventory?</label>
+                <input id="inventoryCount" name="inventoryCount" type="number" min="0" step="1" placeholder="e.g., 12" required />
+              </div>
+
+              <div class="span-2">
+                <label for="reportsNeeded">How many reports do you need?</label>
+                <input id="reportsNeeded" name="reportsNeeded" type="number" min="0" step="1" placeholder="e.g., 20" required />
+              </div>
+            </div>
+
+            <div class="form-actions">
+              <button class="btn btn-primary btn-lg" type="submit">Submit</button>
+              <a class="btn btn-secondary btn-lg" href="./">Back to OUT CHECK</a>
+            </div>
+
+            <p class="helper">
+              This is a lightweight signup for rapid iteration. You’ll get a reply from us with next steps.
+            </p>
+            <p class="micro">
+              Not affiliated with Tesla, Inc. OUT CHECK is an independent product by Only Used Tesla.
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <div class="footer-left">
+          <img class="footer-logo" src="assets/logo-wordmark.png" alt="Only Used Tesla" />
+        </div>
+        <div class="footer-right">
+          <p class="fineprint">
+            Not affiliated with Tesla, Inc.
+          </p>
+          <p class="fineprint subtle">
+            © <span id="year"></span> Only Used Tesla
+          </p>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Modal / Lightbox -->
+  <div class="modal" id="modal" aria-hidden="true" role="dialog" aria-label="Dialog">
+    <div class="modal-backdrop" data-modal-close></div>
+    <div class="modal-panel" role="document">
+      <button class="modal-close" type="button" aria-label="Close" data-modal-close>×</button>
+      <iframe class="modal-iframe" title="Embedded content" src="about:blank"></iframe>
+    </div>
+  </div>
+
+  <script src="assets/app.js"></script>
+  <script>
+    // Static-site signup: opens a prefilled email. Swap this with a real backend endpoint later.
+    (function(){
+      const form = document.getElementById('dealerSignupForm');
+      if (!form) return;
+
+      form.addEventListener('submit', function(e){
+        e.preventDefault();
+
+        const get = (id) => (document.getElementById(id)?.value || '').trim();
+
+        const payload = {
+          name: get('name'),
+          email: get('email'),
+          dealershipName: get('dealershipName'),
+          zip: get('zip'),
+          website: get('website'),
+          inventoryCount: get('inventoryCount'),
+          reportsNeeded: get('reportsNeeded')
+        };
+
+        // TODO: change this inbox to your preferred email.
+        const to = 'hello@onlyusedtesla.com';
+
+        const subject = encodeURIComponent('OUT CHECK — Dealer signup');
+        const body = encodeURIComponent(
+          `Name: ${payload.name}\n` +
+          `Email: ${payload.email}\n` +
+          `Dealership: ${payload.dealershipName}\n` +
+          `ZIP: ${payload.zip}\n` +
+          `Website: ${payload.website}\n` +
+          `Teslas in inventory: ${payload.inventoryCount}\n` +
+          `Reports needed: ${payload.reportsNeeded}\n`
+        );
+
+        window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
+      });
+    })();
+  </script>
+</body>
+</html>
